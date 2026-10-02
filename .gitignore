@@ -2,3 +2,4 @@ template
 build
 .secrets
 __pycache__/
+openfaas-ci.yml.backup
