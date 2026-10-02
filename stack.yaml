@@ -7,4 +7,6 @@ functions:
     lang: python3-http
     handler: ./hello-python
     image: ghcr.io/pg25304/hello-python:latest
-
+    labels:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "5"
