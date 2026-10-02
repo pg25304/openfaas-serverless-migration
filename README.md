@@ -20,6 +20,14 @@ The project also documents the security decisions, limitations and troubleshooti
 
 ---
 
+## Full Technical Report
+
+A detailed technical report covering the complete implementation, security decisions, troubleshooting, CI/CD pipeline, monitoring, limitations and future Azure Kubernetes Service (AKS) development is available here:
+
+📄 [View the Full OpenFaaS Technical Report](./OpenFaaS_Technical_Report_Revised.docx)
+
+---
+
 ## Architecture
 
 ```text
