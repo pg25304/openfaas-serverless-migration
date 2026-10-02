@@ -1,10 +1,15 @@
-from .handler import handle
+import json
+from handler import handle
 
-# Test your handler here
-
-# To enable testing, you can set the build_arg `TEST_ENABLED=true` on the CLI or in your stack.yml
-# https://docs.openfaas.com/reference/yaml/#function-build-args-build-args
 
 def test_handle():
-    # assert handle("input") == "input"
-    pass
+    response = handle(None, None)
+
+    assert response["statusCode"] == 200
+
+    body = json.loads(response["body"])
+
+    assert body["service"] == "OpenFaaS Serverless Demo"
+    assert body["status"] == "running"
+    assert body["platform"] == "Kubernetes"
+    assert "timestamp" in body
